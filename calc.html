@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial-scalw=1.0">
+    <title>N181116</title>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="icon" type-"img/png" href="logo.jpg">
+    <script type="text/javascript">
+        var temp=" ";
+        function store(){
+            document.getElementById('demo').value=temp;
+        }
+        //function 1
+        function fun1(){
+            var input1=document.getElementById('cl1').value;
+            temp=temp+input1;
+            store(temp);
+        }
+        //function 2
+        function fun2(){
+            var input2=document.getElementById('cl2').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 3
+        function fun3(){
+            var input2=document.getElementById('cl3').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 4
+        function fun4(){
+            var input2=document.getElementById('cl4').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 5
+        function fun5(){
+            var input2=document.getElementById('cl5').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 6
+        function fun6(){
+            var input2=document.getElementById('cl6').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 7
+        function fun7(){
+            var input2=document.getElementById('cl7').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 8
+        function fun8(){
+            var input2=document.getElementById('cl8').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 9
+        function fun9(){
+            var input2=document.getElementById('cl9').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function 0
+        function fun_zero(){
+            var input2=document.getElementById('clzero').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function add
+        function fun_add(){
+            var input2=document.getElementById('cladd').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function min
+        function fun_sub(){
+            var input2=document.getElementById('clsub').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function mult
+        function fun_mul(){
+            var input2=document.getElementById('clmul').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function div
+        function fun_div(){
+            var input2=document.getElementById('cldiv').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function dot
+        function fun_dot(){
+            var input2=document.getElementById('cldot').value;
+            temp=temp+input2;
+            store(temp);
+        }
+        //function equal
+        function fun_equal(){
+            try {
+            
+            var n = eval(document.getElementById("demo").value); 
+            if(n=="Infinity" || n=="-Infinity"){
+                throw "Zero Division Error";
+            }
+           
+            document.getElementById("demo").value=n;
+            document.getElementById("demo").style.background="green";
+            exp=n;               
+        }catch(err){
+
+            if(err=="Zero Division Error"){
+                alert("Invalid\n"+err);
+
+            }
+            else{
+                alert("Invalid Error");
+            }
+            document.getElementById("demo").style.background="red";
+       }
+        }
+           
+//function clear
+function reset() {
+            document.getElementById('demo').value = ''; 
+            temp=" ";
+        }
+        
+</script>
+
+</head>
+<body>
+    <h1>Calculator</h1>
+           <div class="div2">
+               <table style="padding-left: 45px;">
+                        <input type ="text" name = "answer" class="calc" id="demo">
+                        <tr>
+                            <td><input type="button" onclick="fun1()" id="cl1" value="1"> </td>
+                            <td class="td"><input type="button" onclick="fun2()" id="cl2" value="2" > </td>
+                            <td class="td"><input type="button" onclick="fun3()" id="cl3" value="3"></td>
+                             <td class="td"><input type="button"  onclick="fun_add()" id="cladd" value="+" > </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="fun4()" id="cl4" value="4" > </td>
+                            <td class="td"><input type="button" onclick="fun5()" id="cl5" value="5" > </td>
+                            <td class="td"><input type="button" onclick="fun6()" id="cl6"  value="6" ></td>
+                            <td class="td"><input type="button"   onclick="fun_sub()" id="clsub"value="-" > </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="fun7()" id="cl7" value="7"> </td>
+                            <td class="td"><input type="button" onclick="fun8()" id="cl8" value="8"> </td>
+                            <td class="td"><input type="button" onclick="fun9()" id="cl9" value="9"></td>
+                                <td class="td"><input type="button" onclick="fun_mul()" id="clmul" value="*"> </td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" onclick="fun_dot()" id="cldot"  value="."> </td>
+                            <td class="td"><input type="button" onclick="fun_zero()" id="clzero" value="0"> </td>
+                            <td class="td"><input type="button" onclick="fun_equal()" id="clequal" value="="></td>
+                                <td class="td"><input type="button" onclick="fun_div()" id="cldiv" value="/"> </td>
+                        </tr>
+                        
+                    </table>
+                
+               
+                <input type="submit"  onclick="reset()"  value="clear" class= "clear"></td>
+                
+           </div>
+
+    </body>
+</html>
+        
